@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Inventory List</title>
+</head>
+<body>
+    <h1>Welcome to your Inventory</h1>
+
+
+    {% if items is not empty %}
+        <p>Here are all your items:</p>
+        <ul>
+            {% for item in items %}
+                <li>{{ item.getName }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action='/items' method='post'>
+        <label for='name'>Item Name</label>
+        <input id='name' name='name' type='text'>
+
+        <button type='submit'>Add item</button>
+    </form>
+    <form action='/delete_items' method='post'>
+        <button type='submit'>Clear</button>
+    </form>
+
+</body>
+</html>
