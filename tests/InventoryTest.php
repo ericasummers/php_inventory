@@ -67,5 +67,22 @@
             //Assert
             $this->assertEquals([], $result);
         }
+
+        function test_find()
+        {
+            //Arrange
+            $name = "Shoes";
+            $name2 = "Stamps";
+            $test_inventory = new Inventory($name);
+            $test_inventory->save();
+            $test_inventory2 = new Inventory($name2);
+            $test_inventory2->save();
+
+            //Act
+            $result = Inventory::find($test_inventory->getId());
+
+            //Assert
+            $this->assertEquals($test_inventory, $result);
+        }
     }
 ?>
