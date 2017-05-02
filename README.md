@@ -1,6 +1,6 @@
 # PHP Inventory
 
-#### _A webpage that displays the frequency of a word, 20 February 2017_
+#### _A webpage that displays an inventory, 20 February 2017_
 
 #### By _**Erica Wright & Philip Putnam**_
 
